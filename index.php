@@ -28,12 +28,15 @@
                   Credits
                 </a>
                 <ul class="dropdown-menu">
-                  <a class="dropdown-item" href="#">AICTE Category wise Credits</a>
-                  <a class="dropdown-item" href="#">Course Type wise Credits</a>
-                  <a class="dropdown-item" href="#">AICTE Category wise Number of Courses</a>
-                  <a class="dropdown-item" href="#">Course Type wise Number of Courses</a>
-                  <a class="dropdown-item" href="#">AICTE Category wise Weekly Learning Hours</a>
-                  <a class="dropdown-item" href="#">Course Type wise Weekly Learning Hours</a>
+                  <a class="dropdown-item" href="CategoryWiseCr.php">AICTE Category wise Credits</a>
+                  <a class="dropdown-item" href="CourseTypeWiseCr.php">Course Type wise Credits</a>
+                  <a class="dropdown-item" href="CategoryWiseCourses.php">AICTE Category wise Number of Courses</a>
+                  <a class="dropdown-item" href="CourseTypeCour.php">Course Type wise Number of Courses</a>
+                  <a class="dropdown-item" href="PC_Courses.php">Professional Core Courses</a>
+                  <a class="dropdown-item" href="PC_Lab_Courses.php">Professional Core Lab Courses</a>
+                  <a class="dropdown-item" href="PE_Courses.php">Professional Elective Courses</a>
+                  <a class="dropdown-item" href="OE_Courses.php">Open Elective Courses</a>
+                  <a class="dropdown-item" href="GateMapping.php">Gate Mapping</a>
                 </ul>
               </li>
             
@@ -66,8 +69,7 @@
                 </div>
 
                 <div>
-                   
-                      </head>
+                </head>
                       <body>
                       <br><br>
                       <h2 id="ct">CREDIT Table</h2>
@@ -87,58 +89,75 @@
                         </tr>
                        
 
-                       
-                        <tr>
-                          <td>Ernst Handel</td>
-                          <td>Roland Mendel</td>
-                          <td>Austria</td>
-                          <td>Alfreds </td>
-                          <td>Maria Anders</td>
-                          <td>Germany</td>
-                          <td>Alfreds </td>
-                          <td>Maria Anders</td>
-                        </tr>
-                        <tr>
-                          <td>Island Trading</td>
-                          <td>Helen Bennett</td>
-                          <td>UK</td>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                          <td>Germany</td>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                        </tr>
-                        <tr>
-                          <td>Laughing Bacchus</td>
-                          <td>Yoshi Tannamuri</td>
-                          <td>Canada</td>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                          <td>Germany</td>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                        </tr>
-                        <tr>
-                          <td>Magazzini Alimentari </td>
-                          <td>Giovanni Rovelli</td>
-                          <td>Italy</td>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                          <td>Germany</td>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                        </tr>
-                         <tr>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                          <td>Germany</td>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                          <td>Germany</td>
-                          <td>Alfreds Futterkiste</td>
-                          <td>Maria Anders</td>
-                          
-                        </tr>
+                       <tbody>
+                            <td>
+                            <tr>
+                                <td><a href="ViewCredits.php?sem=1&amp; branch=Civil">Civil</td>
+                                <td><a href="ViewCredits.php?sem=2&amp; branch=Civil">Civil</td>
+                                <td><a href="ViewCredits.php?sem=3&amp; branch=Civil">Civil</td>
+                                <td><a href="ViewCredits.php?sem=4&amp; branch=Civil">Civil</td>
+                                <td><a href="ViewCredits.php?sem=5&amp; branch=Civil">Civil</td>
+                                <td><a href="ViewCredits.php?sem=6&amp; branch=Civil">Civil</td>
+                                <td><a href="ViewCredits.php?sem=7&amp; branch=Civil">Civil</td>                                
+                                <td><a href="ViewCredits.php?sem=8&amp; branch=Civil">Civil</td>
+                                </tr>
+                                
+                                <tr>
+                                <td><a href="ViewCredits.php?sem=1&amp; branch=Mechanical">Mechanical</td>
+                                <td><a href="ViewCredits.php?sem=2&amp; branch=Mechanical">Mechanical</td>
+                                <td><a href="ViewCredits.php?sem=3&amp; branch=Mechanical">Mechanical</td>
+                                <td><a href="ViewCredits.php?sem=4&amp; branch=Mechanical">Mechanical</td>
+                                <td><a href="ViewCredits.php?sem=5&amp; branch=Mechanical">Mechanical</td>
+                                <td><a href="ViewCredits.php?sem=6&amp; branch=Mechanical">Mechanical</td>
+                                <td><a href="ViewCredits.php?sem=7&amp; branch=Mechanical">Mechanical</td>
+                                <td><a href="ViewCredits.php?sem=8&amp; branch=Mechanical">Mechanical</td>
+                                </tr>
+
+                                <tr>
+                                <td><a href="ViewCredits.php?sem=1&amp; branch=Electrial">Electrial</td>
+                                <td><a href="ViewCredits.php?sem=2&amp; branch=Electrial">Electrial</td>
+                                <td><a href="ViewCredits.php?sem=3&amp; branch=Electrial">Electrial</td>
+                                <td><a href="ViewCredits.php?sem=4&amp; branch=Electrial">Electrial</td>
+                                <td><a href="ViewCredits.php?sem=5&amp; branch=Electrial">Electrial</td>
+                                <td><a href="ViewCredits.php?sem=6&amp; branch=Electrial">Electrial</td>
+                                <td><a href="ViewCredits.php?sem=7&amp; branch=Electrial">Electrial</td>
+                                <td><a href="ViewCredits.php?sem=8&amp; branch=Electrial">Electrial</td>
+                                </tr>
+
+                                <tr>
+                                <td><a href="ViewCredits.php?sem=1&amp; branch=Electronics">Electronics</td>
+                                <td><a href="ViewCredits.php?sem=2&amp; branch=Electronics">Electronics</td>
+                                <td><a href="ViewCredits.php?sem=3&amp; branch=Electronics">Electronics</td>
+                                <td><a href="ViewCredits.php?sem=4&amp; branch=Electronics">Electronics</td>
+                                <td><a href="ViewCredits.php?sem=5&amp; branch=Electronics">Electronics</td>
+                                <td><a href="ViewCredits.php?sem=6&amp; branch=Electronics">Electronics</td>
+                                <td><a href="ViewCredits.php?sem=7&amp; branch=Electronics">Electronics</td>
+                                <td><a href="ViewCredits.php?sem=8&amp; branch=Electronics">Electronics</td>
+                                </tr>
+                                <tr>
+                                <td><a href="ViewCredits.php?sem=1&amp; branch=IT">IT</td>
+                                <td><a href="ViewCredits.php?sem=2&amp; branch=IT">IT</td>
+                                <td><a href="ViewCredits.php?sem=3&amp; branch=IT">IT</td>
+                                <td><a href="ViewCredits.php?sem=4&amp; branch=IT">IT</td>
+                                <td><a href="ViewCredits.php?sem=5&amp; branch=IT">IT</td>
+                                <td><a href="ViewCredits.php?sem=6&amp; branch=IT">IT</td>
+                                <td><a href="ViewCredits.php?sem=7&amp; branch=IT">IT</td>
+                                <td><a href="ViewCredits.php?sem=8&amp; branch=IT">IT</td>
+                                </tr>
+                                <tr>                                
+                                <td><a href="ViewCredits.php?sem=1&amp; branch=CSE">CSE</td>
+                                <td><a href="ViewCredits.php?sem=2&amp; branch=CSE">CSE</td>
+                                <td><a href="ViewCredits.php?sem=3&amp; branch=CSE">CSE</td>
+                                <td><a href="ViewCredits.php?sem=4&amp; branch=CSE">CSE</td>
+                                <td><a href="ViewCredits.php?sem=5&amp; branch=CSE">CSE</td>
+                                <td><a href="ViewCredits.php?sem=6&amp; branch=CSE">CSE</td>
+                                <td><a href="ViewCredits.php?sem=7&amp; branch=CSE">CSE</td>
+                                <td><a href="ViewCredits.php?sem=8&amp; branch=CSE">CSE</td>
+                                </tr>
+                                
+                            </td>
+                       </tbody>
+                        
                       </table>
                       
                       
