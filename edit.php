@@ -6,7 +6,7 @@
 <body>
     <div>
         <?php
-        include ("Form2.php")
+        include ("Form.php");
         ?>
     </div>
 
@@ -38,7 +38,7 @@
                 $type = 'Professional Core(Theory)';
 
                 //db connection
-                include('config.php');
+                // include('config.php');
 
                 $sql = "SELECT * FROM `professioncore` where Sem = '$Sem' and Branch = '$Branch' and Course_type ='$type'";
                 $result = $link->query($sql);
@@ -106,7 +106,7 @@
     <tbody>
     <tr>Professional Elective</tr>
             <tr>";
-                include("config.php");
+                // include("config.php");
                 $sql = "SELECT * FROM professionalelective where Sem = '$Sem'and Branch = '$Branch'";
                 $result = $link->query($sql);
 
@@ -176,7 +176,7 @@
     <tbody>
     <tr>Open Elective</tr>
             <tr>";
-                include("config.php");
+                // include("config.php");
                 $type = "OE";
                 $sql = "SELECT * FROM openelective where Sem = '$Sem'and Branch != '$Branch'";
                 $result = $link->query($sql);

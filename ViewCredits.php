@@ -107,8 +107,8 @@
             <tr>Professional Core(Lab)</tr>
             <tr>
                 <?php
-                include("config.php");
-                $sql = "SELECT * FROM professioncore where Sem = '$Sem'and Branch = '$Branch' and Course_type='Professional Core(Lab)'";
+                // include("config.php");
+                $sql = "SELECT * FROM `professioncore` where Sem = '$Sem'and Branch = '$Branch' and Course_type='Professional Core(Lab)'";
                 $result = $link->query($sql);
 
                 if(!$result){
@@ -175,8 +175,8 @@
     <tbody>
     <tr>Professional Elective</tr>
             <tr>";
-                include("config.php");
-                $sql = "SELECT * FROM professionalelective where Sem = '$Sem'and Branch = '$Branch'";
+                // include("config.php");
+                $sql = "SELECT * FROM `professionalelective` where Sem = '$Sem'and Branch = '$Branch'";
                 $result = $link->query($sql);
 
                 if(!$result){
@@ -239,8 +239,8 @@
     <tbody>
     <tr>Open Elective</tr>
             <tr>";
-                include("config.php");
-                $sql = "SELECT * FROM openelective where Sem = '$Sem'and Branch != '$Branch'";
+                // include("config.php");
+                $sql = "SELECT * FROM `openelective` where Sem = '$Sem'and Branch != '$Branch'";
                 $result = $link->query($sql);
 
                 if(!$result){

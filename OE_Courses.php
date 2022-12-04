@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Form</title>
-</head>
-<style>
+    <style>
     #the-form{
         display: none;
     }
-</style>
+    </style>
+
+    <script>
+    let branchname = prompt("Please enter your name", "Enter Branch");
+    // if (branchName != null) {
+    //     document.getElementById("branch-name").value =
+    //     branchName;
+    // }
+    document.getElementById("branchname").value = branchname;
+</script>
+</head>
+
 
 <body style="margin: 50px;">
 <form id="the-form" method="GET">
@@ -72,14 +82,7 @@
     <!-- <td><a href='edit.php'>Edit</button></td> -->
 
 </body>
-<script>
-    let branchname = prompt("Please enter your name", "Enter Branch");
-    // if (branchName != null) {
-    //     document.getElementById("branch-name").value =
-    //     branchName;
-    // }
-    document.getElementById("branchname").value = branchname;
-</script>
+
 </html>
 
 <!-- <script type="text/javascript">
