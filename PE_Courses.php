@@ -5,22 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-</head>
-<style>
-    #the-form{
+    <style>
+    #table{
         display: none;
     }
-</style>
+    </style>
 
+    <script>
+        function displaydiv(){
+            document.getElementById("table").style.display = "block";
+        }
+    </script>
+
+</head>
 
 <body style="margin: 50px;">
 <!-- Showing Core subjects -->
 
-<form id="the-form" method="GET">
-    <input type="submit"/>
-    <input name="branchname" id="branchname" type="text" value="Hello">
+<form id="the-form" method="GET" action = "">
+    <!-- <input type="submit"/> -->
+    <button type="submit" value="submit" onclick="displaydiv()" >submit</button>
+    <input name="branchname" id="branchname" type="text">
 </form>
-    <table id="table">
+<div id="table">
+<p>hello</p>
+    <table>
         <thead>
             <tr>
                 <th>El No.</th>
@@ -34,45 +43,45 @@
 
         <!-- Data -->
         <tbody>
-            <tr>
                 <?php
                 include ("config.php");
                 $branchname = $_GET['branchname'];
+                echo $branchname;
                 // echo $branchname;
                     
-                $sql = "SELECT EL_NO, Sem, Code, Course_name, Track FROM `professionalelective` where Branch = '$branchname' ORDER BY EL_NO";
-                $result = $link->query($sql);
+                // $sql = "SELECT EL_NO, Sem, Code, Course_name, Track FROM `professionalelective` where Branch = '$branchname' ORDER BY EL_NO";
+                // $result = $link->query($sql);
 
-                if(!$result){
-                    die("Invalid query: ". $link->error);
-                }
+                // if(!$result){
+                //     die("Invalid query: ". $link->error);
+                // }
 
-                else{
-                    $i=1;
-                    while($row = $result->fetch_assoc()){
-                        echo 
-                        "
-                        <tr>
-                        <td>" . $row["EL_NO"] . "</td>
-                        <td>" . $i . "</td>
-                        <td>" . $row["Sem"] . "</td>
-                        <td>" . $row["Code"] . "</td>
-                        <td>" . $row["Course_name"] . "</td
-                        <td>" . $row["Track"] . "</td>
+                // else{
+                //     $i=1;
+                //     while($row = $result->fetch_assoc()){
+                //         echo 
+                //         "
+                //         <tr>
+                //         <td>" . $row["EL_NO"] . "</td>
+                //         <td>" . $i . "</td>
+                //         <td>" . $row["Sem"] . "</td>
+                //         <td>" . $row["Code"] . "</td>
+                //         <td>" . $row["Course_name"] . "</td
+                //         <td>" . $row["Track"] . "</td>
 
-                        </tr>";
-                        ?>
+                //         </tr>";
+                //         ?>
                     
-                        <?php
-                        echo "</tr>";
-                        $i = $i + 1;
-                        }
-                    }
+                //         <?php
+                //         echo "</tr>";
+                //         $i = $i + 1;
+                //         }
+                //     }
                 
-                    ?>
-                </tr>
+                ?>
                 </tbody>
     </table>
+    </div>
 
     
 
@@ -81,12 +90,13 @@
     <a href='Tracks.php'>View Tracks</a>
 </body>
 <script>
-    let branchname = prompt("Please enter your name", "Enter Branch");
-    // if (branchName != null) {
-    //     document.getElementById("branch-name").value =
-    //     branchName;
-    // }
-    document.getElementById("branchname").value = branchname;
+
+    
+    // let branchname = prompt("Please enter your name", "Enter Branch");
+    // // if (branchName != null) {
+    // //     document.getElementById("branch-name").value = branchName;
+    // // }
+    // document.getElementById("branchname").value = branchname;
 </script>
 </html>
 

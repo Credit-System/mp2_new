@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     else if($AICTE_category == "OE"){
         $EL_NO = $_POST['EL_NO'];
-        $sql = "insert into `openelective` (`EL_NO`, `Sem`, `Branch`, `Code`, `Course_name`, `L`, `T`, `P`, `I`, `Hr`, `Cr`, `MSE`, `ISE`, `ESE`, `POE`) values ('$EL_NO', '$Sem', '$Branch', '$Code', '$Course_name', '$L', '$T', '$P', '$I', '$Hr', '$Cr', '$MSE', '$ISE', '$ESE', '$POE')";
+        $sql = "insert into `openelective` (`EL_NO`, `Sem`, `Branch`, `Code`, `Course_name`, `L`, `T`, `P`, `I`, `Hr`, `Cr`, `MSE`, `ISE`, `ESE`, `POE`, `Course_type`, `AICTE_category`) values ('$EL_NO', '$Sem', '$Branch', '$Code', '$Course_name', '$L', '$T', '$P', '$I', '$Hr', '$Cr', '$MSE', '$ISE', '$ESE', '$POE', '$Course_type', '$AICTE_category')";
         $result = mysqli_query($conn, $sql);
     }
 
@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
 
     echo '<script>alert("Inserted")</script>';
-    header("location: Form.php");
+    header("location: ViewCredits.php?sem=".$Sem."&branch=".$Branch);
 
 }
 ?>

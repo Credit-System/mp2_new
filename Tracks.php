@@ -36,10 +36,10 @@
                 $branchname = $_GET['branchname'];
                     
                 $sql = "SELECT Track_name FROM `track` where Branch = '$branchname'";
-                $result = $con->query($sql);
+                $result = $link->query($sql);
 
                 if(!$result){
-                    die("Invalid query: ". $conn->error);
+                    die("Invalid query: ". $link->error);
                 }
 
                 else{
@@ -58,6 +58,8 @@
                         $i = $i + 1;
                         }
                     }
+                    echo "    <td><a href='TrackEdit.php?id='.$row['Track_id']>Edit</button></td>
+                    "
                 
                     ?>
                 </tr>
@@ -66,7 +68,7 @@
 
     
 
-    <td><a href='edit.php'>Edit</button></td>
+    <td><a href='TrackEdit.php'>Insert</button></td>
 
 </body>
 <script>

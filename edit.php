@@ -40,7 +40,7 @@
                 //db connection
                 // include('config.php');
 
-                $sql = "SELECT * FROM `professioncore` where Sem = '$Sem' and Branch = '$Branch' and Course_type ='$type'";
+                $sql = "SELECT * FROM `professioncore` where Sem = '$Sem' and Branch = '$Branch'";
                 $result = $link->query($sql);
 
                 if(!$result){
@@ -67,8 +67,9 @@
                         <td><?php echo $row["ESE"]; ?></td>
                         <td><?php echo $row["POE"]; ?></td>
                         <td>
-                                <a href="update.php?id=<?php echo $row['Code']; ?>&amp;type=<?php echo $row['Course_type']; ?>">Update</a>
-								<a href="del.php?id=<?php echo $row['Code']; ?>">Delete</a>
+                                <a href="Form2.php?id=<?php echo $row['Code']; ?>&type=<?php echo $row['AICTE_category']; ?>">Change</a>
+
+								<a href="del.php?id=<?php echo $row['Code']; ?>&sem=<?php echo $Sem; ?>&type=<?php echo $type; ?>">Delete</a>
 						</td>
                         </tr>
                     <?php
@@ -107,6 +108,7 @@
     <tr>Professional Elective</tr>
             <tr>";
                 // include("config.php");
+                $type = "PE";
                 $sql = "SELECT * FROM professionalelective where Sem = '$Sem'and Branch = '$Branch'";
                 $result = $link->query($sql);
 
@@ -136,8 +138,8 @@
                         <td>" . $row["ESE"] . "</td>";
                         ?>
                         <td>
-                                <a href="update.php?id=<?php echo $row['Code']; ?>&amp;type=<?php echo $row['Course_type']; ?>">Update</a>
-								<a href="del.php?id=<?php echo $row['Code']; ?>">Delete</a>
+                                <a href="Form2.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Change</a>
+								<a href="del.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Delete</a>
 						</td>
                         <?php
                     
@@ -207,8 +209,9 @@
                         <td>" . $row["POE"] . "</td>";
                         ?>
                         <td>
-                                <a href="update.php?id=<?php echo $row['Code']; ?>&amp;type=<?php echo $type; ?>">Update</a>
-								<a href="del.php?id=<?php echo $row['Code']; ?>">Delete</a>
+                                <a href="Form2.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Change</a>
+                                
+								<a href="del.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Delete</a>
 						</td>
                         <?php
                         echo "

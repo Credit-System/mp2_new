@@ -7,24 +7,26 @@
     <title>Document</title>
 </head>
 <body >
-    <script>
-        alert("Deleted");
-    </script>
+
     
 <?php
 $Code = $_GET['id'];
+$Sem = $_GET['sem'];
+$type = $_GET['type'];
+$Branch = $_GET['Branch'];
+
 
         $user = 'root';
         $mydatabase = 'miniproject2';
 
         $conn = new mysqli("localhost", $user, "", $mydatabase);
 
-        if($AICTE_category == "PE"){
+        if($type == "PE"){
             $sql ="delete from `professionalelective` where Code = '$Code'";
             $result = mysqli_query($conn, $sql);
         }
     
-        else if($AICTE_category == "OE"){
+        else if($type == "OE"){
             $sql = "delete from `openelective` where Code = '$Code'";
             $result = mysqli_query($conn, $sql);
         }
@@ -34,7 +36,7 @@ $Code = $_GET['id'];
 
         }
 
-        header("location: edit.php");
+        header("location: edit.php?sem=".$Sem."&branch=".$Branch);
 ?>
 
 </body>
