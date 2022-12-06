@@ -1,19 +1,57 @@
 <!doctype html>
+
 <html lang="en">
-  <head>
+  
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" >
     
-      
+    
+    
+
+    <style>
+      a{
+        text-decoration :none;
+        color: maroon;
+      }
+      #logo{
+          /* margin-left : 450px; */
+          /* align-items : centre; */
+          /* display :flex; */
+          display: flex;
+          justify-content: center;
+          color: maroon;
+      }
+
+       #edb{
+        text-decoration: none;
+        border: solid rgb(0, 0, 0);
+        /* margin-top: 25px; */
+        background-color: rgb(255, 241, 212);
+        margin-left: 660px;
+        margin-right: 660px;
+        padding: 6px;
+        margin-top: 50%;
+        justify-content: center;
+        display: flex;
+        margin-top: 25px;
+        color: black;
+
+   
+  } 
+    </style>
+    
+    
+    <!-- class="navbar navbar-expand-lg bg-warning" -->
     <!-- <a href="login-pro/login/login.php"></a> -->
   </head>
   <body>
     <!-- <h1>Hello, world!</h1> -->
     <nav class="navbar navbar-expand-lg bg-warning">
-        <div class="container-fluid">
+        <div class="container-fluid" >
           <a class="navbar-brand" href="#">CREDIT SYSTEM</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,9 +67,9 @@
                 </a>
                 <ul class="dropdown-menu">
                   <a class="dropdown-item" href="CategoryWiseCr.php">AICTE Category wise Credits</a>
-                  <a class="dropdown-item" href="CourseTypeWiseCr.php">Course Type wise Credits</a>
-                  <a class="dropdown-item" href="CategoryWiseCourses.php">AICTE Category wise Number of Courses</a>
-                  <a class="dropdown-item" href="CourseTypeCour.php">Course Type wise Number of Courses</a>
+                  <a class="dropdown-item" href="CourseTypeWiseCredits.php">Course Type wise Credits</a>
+                  <a class="dropdown-item" href="CategoryWiseCourses.php">AICTE Category wise Courses</a>
+                  <a class="dropdown-item" href="CourseTypeCour.php">Course Type wise Courses</a>
                   <a class="dropdown-item" href="PC_Courses.php">Professional Core Courses</a>
                   <a class="dropdown-item" href="PC_Lab_Courses.php">Professional Core Lab Courses</a>
                   <a class="dropdown-item" href="PE_Courses.php">Professional Elective Courses</a>
@@ -50,9 +88,10 @@
       </nav>
 
       <!-- Home-->
-
-
-      <h3 id="ho">Walchand College Of Engineering Sangli</h3><br>
+        <div id="logo">
+        <img  src="logo.png" alt="Walchand College Of Engineering Sangli"></div>
+      <!-- <h3 id="ho">Walchand College Of Engineering Sangli</h3> -->
+      <br>
                     
                     <!-- <img src="wce_home.jpg" alt="walchand">
                     <img src="img2.jpg" alt="walchand">
@@ -168,7 +207,7 @@
                 
               
 
-            <a id="edbtn" href="http://localhost/login-pro/login/login.php">Edit</a>
+            <!-- <a id="edb" href="http://localhost/login-pro/login/login.php">Edit</a> -->
 
                 
                   <!-- Contact us-->

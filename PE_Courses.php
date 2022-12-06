@@ -11,22 +11,11 @@
     }
     </style>
 
-    <script>
-        function displaydiv(){
-            document.getElementById("table").style.display = "block";
-        }
-    </script>
-
 </head>
 
 <body style="margin: 50px;">
 <!-- Showing Core subjects -->
 
-<form id="the-form" method="GET" action = "">
-    <!-- <input type="submit"/> -->
-    <button type="submit" value="submit" onclick="displaydiv()" >submit</button>
-    <input name="branchname" id="branchname" type="text">
-</form>
 <div id="table">
 <p>hello</p>
     <table>
@@ -45,7 +34,7 @@
         <tbody>
                 <?php
                 include ("config.php");
-                $branchname = $_GET['branchname'];
+                $branchname = "IT";
                 echo $branchname;
                 // echo $branchname;
                     
@@ -89,15 +78,7 @@
 
     <a href='Tracks.php'>View Tracks</a>
 </body>
-<script>
 
-    
-    // let branchname = prompt("Please enter your name", "Enter Branch");
-    // // if (branchName != null) {
-    // //     document.getElementById("branch-name").value = branchName;
-    // // }
-    // document.getElementById("branchname").value = branchname;
-</script>
 </html>
 
 <!-- <script type="text/javascript">

@@ -3,7 +3,8 @@
 <head>
 <title>Credit System</title>
 <body>
-<form id="form" method="POST" action="">
+
+<form id="form" method="POST" action="TrackAdd.php">
         <label>Branch:</label>
         <input type="text" name="Branch" id="Branch">
 
@@ -16,6 +17,9 @@
 
         <label>Track name:</label>
         <input type="text" name="Track_name" id="Track_name">
+
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
 
 </form>
 <?php

@@ -1,0 +1,53 @@
+body{
+    background:#f3c538;
+}
+.forget-pwd > a{
+    color: #dc3545;
+    font-weight: 500;
+}
+.panel-default{
+    padding: 31%;
+    margin-top: -27%;
+}
+.sel1{
+    width:100%;
+}
+.panel-body{
+    padding: 15%;
+    margin-bottom: -50%;
+    background: rgb(255, 241, 212);
+    border-radius: 5px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.input
+.btnForget{
+    background: #c0392b;
+    border:none;
+}
+.dropdown{
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.dropdown button{
+    width: 100%;
+}
+.dropdown ul{
+    width: 100%;
+}
+
+.Padding{
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+

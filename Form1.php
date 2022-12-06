@@ -37,26 +37,6 @@ function admSelectCheck(nameSelect) {
     
 <!------ Include the above in your HEAD tag ---------->
 <body>
-<?php
-
-$Code = $_GET['id'];
-$type = $_GET['type'];
-$user = 'root';
-$mydatabase = 'miniproject2';
-
-$conn = new mysqli("localhost", $user, "", $mydatabase);
-
-if($type == "PE"){
-    $result = mysqli_query($conn, "SELECT * FROM `professionalelective` WHERE `Code`='$Code'");
-}
-else if($type == "OE"){
-    $result = mysqli_query($conn, "SELECT * FROM `openelective` WHERE `Code`='$Code'");
-}
-else{
-    $result = mysqli_query($conn, "SELECT * FROM `professioncore` WHERE `Code`='$Code'");
-}
-$res = mysqli_fetch_array($result);
-?>
 <div class="container forget-password">
             <div class="row">
                 <div class="col-md-12 col-md-offset-4">
@@ -66,13 +46,13 @@ $res = mysqli_fetch_array($result);
                                 <!-- <img src="https://i.ibb.co/rshckyB/car-key.png" alt="car-key" border="0"> -->
                                 <h2 class="text-center">Course Details</h2>
                                 <p>Please Fill the Information as per curriculum</p>
-                                <form id="register-form" role="form" autocomplete="off" class="form" method="POST" action="update.php">
+                                <form id="register-form" role="form" autocomplete="off" class="form" method="POST" action="add.php">
                                     
-                                <div class="form-group">
+                                    <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                             <select id="Sem" name="Sem" class="Padding">
-                                            <option selected="true" disabled="disabled"><?php echo $res['Sem'];?></option>
+                                            <option selected="true" disabled="disabled">Enter Sem</option>
                                             <option value="1">Sem 1</option>
                                             <option value="2">Sem 2</option>
                                             <option value="3">Sem 3</option>
@@ -88,7 +68,7 @@ $res = mysqli_fetch_array($result);
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                             <select id="Branch" name="Branch" class="Padding">
-                                            <option selected="true" disabled="disabled"><?php echo $res['Branch'];?></option>
+                                            <option selected="true" disabled="disabled">Enter Sem</option>
                                             <option value="CSE">Computer Science</option>
                                             <option value="IT">Information Technology</option>
                                             <option value="mech">Mechanical</option>
@@ -102,7 +82,7 @@ $res = mysqli_fetch_array($result);
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                             <select id="Course_type" name="Course_type" class="Padding">
-                                            <option selected="true" disabled="disabled"><?php echo $res['Course_type'];?></option>
+                                            <option selected="true" disabled="disabled">Enter Course Type</option>
                                             <option value="Professional Core(Theory)">Professional Core(Theory)</option>
                                             <option value="Professional Core(Lab)">Professional Core(LAb)</option>
                                             <option value="Professional Elective(Theory)">Professional Elective(Theory)</option>
@@ -118,7 +98,7 @@ $res = mysqli_fetch_array($result);
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                             <select id="AICTE_category" name="AICTE_category" class="Padding" onchange="admSelectCheck(this);">
-                                            <option selected="true" disabled="disabled"><?php echo $res['AICTE_category'];?></option>
+                                            <option selected="true" disabled="disabled">Enter AICTE Category</option>
                                             <option value="BS">BS</option>
                                             <option value="HS">HS</option>
                                             <option value="ES">ES</option>
@@ -134,7 +114,7 @@ $res = mysqli_fetch_array($result);
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                             <select id="Track" name="Track" class="Padding">
-                                            <option selected="true" disabled="disabled"><?php echo $res['Track'];?></option>
+                                            <option selected="true" disabled="disabled">Select Track</option>
                                             <?php
                                                 $Branch = "IT";
                                                 include ('config.php');
@@ -152,79 +132,79 @@ $res = mysqli_fetch_array($result);
                                     <div class="form-group" id="OEcheck" style="display:none;">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="EL_NO" name="EL_NO" placeholder="Enter Elective No" class="form-control"  type="number" value=<?php echo $res['EL_NO'];?>>
+                                            <input id="EL_NO" name="EL_NO" placeholder="Enter Elective No" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group" id="Padding">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="code" name="Code" placeholder="Enter Course Code" class="form-control"  type="text" value=<?php echo $res['Code'];?>>
+                                            <input id="code" name="Code" placeholder="Enter Course Code" class="form-control"  type="text">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="Course_name" name="Course_name" placeholder="Enter Course name" class="form-control"  type="text" value=<?php echo $res['Course_name'];?>>
+                                            <input id="Course_name" name="Course_name" placeholder="Enter Course name" class="form-control"  type="text">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="L" name="L" placeholder="No. of Lecture required" class="form-control"  type="number" value=<?php echo $res['L'];?>>
+                                            <input id="L" name="L" placeholder="No. of Lecture required" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="T" name="T" placeholder="No. of Tutorials required" class="form-control"  type="number" value=<?php echo $res['T'];?>>
+                                            <input id="T" name="T" placeholder="No. of Tutorials required" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="P" name="P" placeholder="No. of Practicals required" class="form-control"  type="number" value=<?php echo $res['P'];?>>
+                                            <input id="P" name="P" placeholder="No. of Practicals required" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="I" name="I" placeholder="No. of interactive ecture required" class="form-control"  type="number" value=<?php echo $res['I'];?>>
+                                            <input id="I" name="I" placeholder="No. of interactive ecture required" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="Hr" name="Hr" placeholder="No. of hour required" class="form-control"  type="number" value=<?php echo $res['Hr'];?>>
+                                            <input id="Hr" name="Hr" placeholder="No. of hour required" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="Cr" name="Cr" placeholder="No. of credits required" class="form-control"  type="number" value=<?php echo $res['Cr'];?>>
+                                            <input id="Cr" name="Cr" placeholder="No. of credits required" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="MSE" name="MSE" placeholder="MSE mark" class="form-control"  type="number" value=<?php echo $res['MSE'];?>>
+                                            <input id="MSE" name="MSE" placeholder="MSE mark" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="ISE" name="ISE" placeholder="ISE mark" class="form-control"  type="number" value=<?php echo $res['ISE'];?>>
+                                            <input id="ISE" name="ISE" placeholder="ISE mark" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                            <input id="ESE" name="ESE" placeholder="ESE mark" class="form-control"  type="number" value=<?php echo $res['ESE'];?>>
+                                            <input id="ESE" name="ESE" placeholder="ESE mark" class="form-control"  type="number">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <select class="form-control" id="POE" name="POE">
-                                                <option selected="true" disabled="disabled"><?php echo $res['POE'];?></option>
+                                                <option selected="true" disabled="disabled">POE</option>
                                                 <option>Yes</option>
                                                 <option>No</option>
                                             </select>
@@ -237,7 +217,7 @@ $res = mysqli_fetch_array($result);
                                         </div>
                                     </div> -->
                                     <div class="form-group">
-                                        <input name="btnForget" class="btn btn-lg btn-primary btn-block btnForget" value="Update" type="submit">
+                                        <input name="btnForget" class="btn btn-lg btn-primary btn-block btnForget" value="Insert" type="submit">
                                     </div>
 
                                 </form>

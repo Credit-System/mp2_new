@@ -31,8 +31,9 @@
                 <?php
                 include ("config.php");
                 $branchname = "IT";
+                $id = 1;
                     
-                $sql = "SELECT Track_name FROM `track` where Branch = '$branchname'";
+                $sql = "SELECT Track_name FROM `track` where Branch = '$branchname' and Track_id = '$id'";
                 $result = $link->query($sql);
 
                 if(!$result){
@@ -48,13 +49,12 @@
                         <td>" . $i . "</td>
                         <td>" . $row["Track_name"] . "</td>";
                         ?>
-
                         <td>
-                            <a href='TrackInsert.php?id=<?php echo $row["Track_id"]; ?>'>Edit</a>
-                        </td>
-                    
+                                <a href='TrackEdit.php?id=<?php echo $row["Track_id"]; ?>'>Edit</a>
+                                </td>
                         <?php
-                        echo "</tr>";
+                        echo "
+                        </tr>";
                         $i = $i + 1;
                         }
                     }
@@ -67,7 +67,7 @@
 
     
 
-    <td><a href='TrackAdd.php'>Insert</button></td>
+    <td><a href='TrackInsert.php'>Insert</button></td>
 
 </body>
 

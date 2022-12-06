@@ -5,11 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Form</title>
+    <title>Credit System</title>
+    <style>
+    .nav-bar{
+        width: 100%;
+        background-color: rgb(255, 241, 212);
+        padding: 1%;
+        /* text-align: center; */
+        /* padding-bottom: 0.8%; */
+        color: black;
+        font-size: large;
+        text-decoration: none;
+    }
+    .btn{
+        text-decoration: none;
+        border: solid rgb(0, 0, 0);
+        background-color: rgb(255, 241, 212);
+        margin-left: 660px;
+        margin-right: 660px;
+        padding: 6px;
+        margin-top: 50%;
+        justify-content: center;
+        display: flex;
+        margin-top: 25px;
+        color: black;
+    }
+    table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+  </style>
 </head>
-<body style="margin: 50px;">
+<body>
+<?php
+$Sem = $_GET['sem'];
+$Branch = $_GET['branch'];
+?>
+<!-- Image and text -->
+<div class="nav-bar">
+<nav class="navbar navbar-light bg-burlywood">
+<span><img src="logo2.png" width="30" height="30" class="d-inline-block align-top" alt=""></span><span style="margin-left: 0.5rem;">Walchand College of Engineering Sangli</span>
+</nav>
+
+</div>
 <!-- Showing Core subjects -->
+<h2 style="text-align: center;"><?php echo $Branch; ?> Credits System</h2>
     <table id="PCTheory">
+    <h4>Professional Core(Theory)</h4>
+
         <thead>
             <tr>
                 <th>Sr No</th>
@@ -33,11 +80,8 @@
         <tbody>
         <div>
 
-            <tr>Professional Core(Theory)</tr>
             <tr>
                 <?php
-                $Sem = $_GET['sem'];
-                $Branch = $_GET['branch'];
                 $type = 'Professional Core(Theory)';
                 //db connection
                 include('config.php');
@@ -84,6 +128,8 @@
         </div>
         <div> 
         <table id="PCLab">
+        <h4>Professional Core(Theory)</h4>
+
         <thead>
             <tr>
                 <th>Sr No</th>
@@ -104,7 +150,6 @@
         </thead>
 
             <tbody>    
-            <tr>Professional Core(Lab)</tr>
             <tr>
                 <?php
                 // include("config.php");
@@ -152,7 +197,7 @@
     if($Sem > 4){
         echo "
     <table id='PE_table' class='table table-bordered table-striped'>
-    <h3>Professional Elective</h3>
+    <h4>Professional Elective</h4>
     <thead>
         <tr>
             <th>Sr No</th>
@@ -173,7 +218,6 @@
         </tr>
     </thead>
     <tbody>
-    <tr>Professional Elective</tr>
             <tr>";
                 // include("config.php");
                 $sql = "SELECT * FROM `professionalelective` where Sem = '$Sem'and Branch = '$Branch'";
@@ -214,9 +258,8 @@
     </tbody>
     </table>
 
-    <h3>Open Elective</h3>
     <table id='OE_table' class='table table-bordered table-striped'>
-    <h3>Open Elective</h3>
+    <h4>Open Elective</h4>
     <thead>
         <tr>
             <th>Sr No</th>
@@ -237,7 +280,6 @@
         </tr>
     </thead>
     <tbody>
-    <tr>Open Elective</tr>
             <tr>";
                 // include("config.php");
                 $sql = "SELECT * FROM `openelective` where Sem = '$Sem'and Branch != '$Branch'";
@@ -278,7 +320,8 @@
     </table>";
     }
     ?>
-    <td><a href='edit.php?sem=<?php echo $Sem; ?>&amp;branch=<?php echo $Branch; ?>'>Edit</button></td>
+    <td><a href='edit.php?sem=<?php echo $Sem; ?>&amp;branch=<?php echo $Branch; ?>' class="btn">Edit</button></td>
+    
 
     <!-- <td><a href='edit.php'>Edit</button></td> -->
     

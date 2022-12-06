@@ -1,104 +1,136 @@
-#nav{
-    position: fixed;
-    width: 100%;
-    color: rgb(244, 171, 25);
-    /* background-color: blue;
+/* @import "bootstrap.css"; */
+
+#nav {
+  /* position: fixed; */
+  width: 100%;
+  color: rgb(244, 171, 25);
+  /* background-color: blue;
     color: aliceblue; */
-    /* word-spacing: 290px; */
- 
+  /* word-spacing: 290px; */
+
 
 }
-#ho{
-    text-align: center;
-    margin-top: 5%;
+
+#ho {
+  text-align: center;
+  margin-top: 5%;
 
 }
+
 #home {
-    text-align: center;
-    /* background-color: beige; */
-    /* background-image: url(wce_home.jpg);
+  text-align: center;
+  /* background-color: beige; */
+  /* background-image: url(wce_home.jpg);
       background-repeat: no-repeat;
       
       background-size: contain; */
-    background-color: rgb(255, 241, 212);
-    width: 80%;
-    margin: auto;
-    border: solid rgb(0, 0, 0);
-    /* border: 1cm; */
-    /* border-color: black; */
-    border-radius: 20px;
-    /* margin-top: 5%; */
-    padding: 8px;
-    font-size: large;
-    justify-content: center;
-    text-align: center;
-  }
-#cred{
-    text-align: center;
-    /* border-style: solid; */
-    margin-top: 5%;
-    margin-bottom: 3%;
+  background-color: rgb(255, 241, 212);
+  width: 80%;
+  margin: auto;
+  border: solid rgb(0, 0, 0);
+  /* border: 1cm; */
+  /* border-color: black; */
+  border-radius: 20px;
+  /* margin-top: 5%; */
+  padding: 8px;
+  font-size: large;
+  justify-content: center;
+  text-align: center;
 
 }
-#btn{
-    margin-left: 90%;
-    align-items:baseline ;
-    margin-top: 5%;
+
+#cred {
+  text-align: center;
+  /* border-style: solid; */
+  margin-top: 5%;
+  margin-bottom: 3%;
+
 }
-#con{
-    text-align: center;
+
+#btn {
+  margin-left: 90%;
+  align-items: baseline;
+  margin-top: 5%;
 }
-#contact{
-    background-color: black;
-    color: rgb(255, 241, 212);
-    text-align: center;
-    margin-top: 5%;
+
+#con {
+  text-align: center;
 }
-#img{
-    text-align: center;
+
+#contact {
+  background-color: black;
+  color: rgb(255, 241, 212);
+  text-align: center;
+  margin-top: 5%;
 }
-#cop{
-    text-align: center;
+
+#img {
+  text-align: center;
 }
-#tablee{
-    border: 1px solid black;
+
+#cop {
+  text-align: center;
 }
+
+#tablee {
+  border: 1px solid black;
+}
+
 #table1 {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid  rgb(0,0,0);
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: rgb(255, 241, 212);
-  }
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-  #edbtn{
-    text-decoration: none;
-    border: solid rgb(0, 0, 0);
-    margin-top: 5%;
-    background-color: rgb(255, 166, 0);
-    margin-left: 1130px;
-    padding: 6px;
-   
-  }
+td,
+th {
+  border: 1px solid rgb(0, 0, 0);
+  text-align: left;
+  padding: 8px;
+}
 
+tr:nth-child(even) {
+  background-color: rgb(255, 241, 212);
+}
 
-  #contact{
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 241, 212);
-    /* text-decoration: none; */
-  }
-  #contact a{
-    text-decoration: none;
-  }
-  #ct{
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+#edb {
+  text-decoration: none;
+  border: solid rgb(0, 0, 0);
+  margin-top: 5%;
+  background-color: rgb(255, 166, 0);
+  margin-left: 1130px;
+  padding: 6px;
+
+}
+
+#contact {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 241, 212);
+  /* text-decoration: none; */
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+#ct {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+
+  /* align-items: center;
+    margin-left: 500px;
+    background-color: aqua; */
+
+}
+/* #form1{
+  box-sizing: border-box;
+} */
+
+/* *{
+  display: inline-flex;
+} */

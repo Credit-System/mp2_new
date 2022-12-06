@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Basic MySQLi Commands</title>
+<title>Credit System</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+    .nav-bar{
+        width: 100%;
+        background-color: rgb(255, 241, 212);
+        padding: 1%;
+        /* text-align: center; */
+        /* padding-bottom: 0.8%; */
+        color: black;
+        font-size: large;
+        text-decoration: none;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    #btn{
+        text-decoration: none;
+        border: solid rgb(0, 0, 0);
+        background-color: rgb(255, 241, 212);
+        /* margin-left: 660px;
+        margin-right: 660px;
+        padding: 6px;
+        margin-top: 50%; */
+        justify-content: center;
+        display: flex;
+        margin-top: 25px;
+        color: black;
+    }
+    table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+</style>
 </head>
 <body>
+<div class="nav-bar">
+<nav class="navbar navbar-light bg-burlywood">
+<span><img src="logo2.png" width="30" height="30" class="d-inline-block align-top" alt=""></span><span style="margin-left: 0.5rem;">Walchand College of Engineering Sangli</span>
+</nav>
+<br>
+</div>
     <div>
         <?php
-        include ("Form.php");
+        // include ("Form.php");
         ?>
     </div>
 
     <div>
-		<table border="1">
+		<table >
         <thead>
             <tr>
                 <th>Sr No</th>
@@ -38,7 +82,7 @@
                 $type = 'Professional Core(Theory)';
 
                 //db connection
-                // include('config.php');
+                include('config.php');
 
                 $sql = "SELECT * FROM `professioncore` where Sem = '$Sem' and Branch = '$Branch'";
                 $result = $link->query($sql);
@@ -138,7 +182,7 @@
                         <td>" . $row["ESE"] . "</td>";
                         ?>
                         <td>
-                                <a href="Form2.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Change</a>
+                                <a href="Form.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Change</a>
 								<a href="del.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Delete</a>
 						</td>
                         <?php
@@ -227,5 +271,7 @@
             }
             ?>
 	</div>
+    <button id="btn"><a href="Form1.php" style="decoration: none;">Insert</a></button>
 </body>
+
 </html>

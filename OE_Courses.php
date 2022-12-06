@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <title>Form</title>
     <style>
+    .nav-bar{
+    width: 100%;
+    background-color: rgb(255, 241, 212);
+    padding: 1%;
+    /* text-align: center; */
+    /* padding-bottom: 0.8%; */
+    color: black;
+    font-size: large;
+    text-decoration: none;
+    }
+    #table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
     #the-form{
         display: none;
     }
@@ -19,15 +37,22 @@
     //     branchName;
     // }
     document.getElementById("branchname").value = branchname;
-</script>
+    </script>
 </head>
 
 
 <body style="margin: 50px;">
-<form id="the-form" method="GET">
+<!-- <form id="the-form" method="GET">
     <input type="submit"/>
     <input name="branchname" id="branchname" type="text" value="Hello">
-</form>
+</form> -->
+<div class="nav-bar">
+<nav class="navbar navbar-light bg-burlywood">
+<span><img src="logo2.png" width="30" height="30" class="d-inline-block align-top" alt=""></span><span style="margin-left: 0.5rem;">Walchand College of Engineering Sangli</span>
+</nav>
+</div>
+<br>
+<h3 style="text-align: center;">Open Elective</h3>
 <!-- Showing Core subjects -->
     <table id="table">
         <thead>
@@ -45,7 +70,7 @@
             <tr>
                 <?php
                 include("config.php");
-                $Branch = $_GET['branchname'];
+                $Branch = "IT";
                 $sql = "SELECT * FROM openelective where Branch = '$Branch' order by EL_NO, Sem";
                 $result = $link->query($sql);
 
