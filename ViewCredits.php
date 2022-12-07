@@ -128,7 +128,7 @@ $Branch = $_GET['branch'];
         </div>
         <div> 
         <table id="PCLab">
-        <h4>Professional Core(Theory)</h4>
+        <h4>Professional Core(Lab)</h4>
 
         <thead>
             <tr>
@@ -320,8 +320,8 @@ $Branch = $_GET['branch'];
     </table>";
     }
     ?>
-    <td><a href='edit.php?sem=<?php echo $Sem; ?>&amp;branch=<?php echo $Branch; ?>' class="btn">Edit</button></td>
-    
+    <button class="btn"><a href='edit.php?sem=<?php echo $Sem; ?>&amp;branch=<?php echo $Branch; ?>'>Edit</button>
+    <!-- <button class="editbtn">Edit</button> -->
 
     <!-- <td><a href='edit.php'>Edit</button></td> -->
     
@@ -331,8 +331,8 @@ $Branch = $_GET['branch'];
 </body>
 </html>
 
-<!-- <script type="text/javascript">
-    document.getElementById("editbtn").onclick = function () {
-        location.href = "/login.php";
-    };
-</script> -->
+<script type="text/javascript">
+//     document.getElementById("editbtn").onclick = function () {
+//         location.href = "login.php";
+//     };
+// </script>

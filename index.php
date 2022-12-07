@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>demo</title>
+    <title>Credit System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" >
     
@@ -66,8 +66,8 @@
                   Credits
                 </a>
                 <ul class="dropdown-menu">
-                  <a class="dropdown-item" href="CategoryWiseCr.php">AICTE Category wise Credits</a>
-                  <a class="dropdown-item" href="CourseTypeWiseCredits.php">Course Type wise Credits</a>
+                  <a class="dropdown-item" href="CategoryWiseCredits.php">AICTE Category wise Credits</a>
+                  <a class="dropdown-item" href="CourseTypeWiseCr.php">Course Type wise Credits</a>
                   <a class="dropdown-item" href="CategoryWiseCourses.php">AICTE Category wise Courses</a>
                   <a class="dropdown-item" href="CourseTypeCour.php">Course Type wise Courses</a>
                   <a class="dropdown-item" href="PC_Courses.php">Professional Core Courses</a>

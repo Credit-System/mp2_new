@@ -111,7 +111,7 @@
                         <td><?php echo $row["ESE"]; ?></td>
                         <td><?php echo $row["POE"]; ?></td>
                         <td>
-                                <a href="Form2.php?id=<?php echo $row['Code']; ?>&type=<?php echo $row['AICTE_category']; ?>">Change</a>
+                                <a href="Form.php?id=<?php echo $row['Code']; ?>&type=<?php echo $row['AICTE_category']; ?>">Change</a>
 
 								<a href="del.php?id=<?php echo $row['Code']; ?>&sem=<?php echo $Sem; ?>&type=<?php echo $type; ?>">Delete</a>
 						</td>
@@ -197,7 +197,6 @@
     </tbody>
     </table>
 
-    <h3>Open Elective</h3>
     <table id='OE_table' class='table table-bordered table-striped'>
     <h3>Open Elective</h3>
     <thead>
@@ -253,7 +252,7 @@
                         <td>" . $row["POE"] . "</td>";
                         ?>
                         <td>
-                                <a href="Form2.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Change</a>
+                                <a href="Form.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Change</a>
                                 
 								<a href="del.php?id=<?php echo $row['Code']; ?>&type=<?php echo $type; ?>">Delete</a>
 						</td>

@@ -4,7 +4,9 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
+    $Sem = $_POST['sem'],
+    $Branch = $Post['branch'];
+    header("location: edit.php?sem=".$Sem."&branch=".$Branch);
     exit;
 }
  

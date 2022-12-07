@@ -68,7 +68,7 @@ function admSelectCheck(nameSelect) {
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                             <select id="Branch" name="Branch" class="Padding">
-                                            <option selected="true" disabled="disabled">Enter Sem</option>
+                                            <option selected="true" disabled="disabled">Enter Form</option>
                                             <option value="CSE">Computer Science</option>
                                             <option value="IT">Information Technology</option>
                                             <option value="mech">Mechanical</option>
